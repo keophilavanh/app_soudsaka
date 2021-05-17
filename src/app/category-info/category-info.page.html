@@ -1,0 +1,54 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+      <ion-grid>
+          <ion-row>
+            <ion-col class="back"  >
+              <div (click)="dismiss()">
+                ກັບຄືນ
+              </div>
+            </ion-col>
+             
+          </ion-row>
+      </ion-grid>
+
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+		<ion-row class=" ion-text-center">
+			<ion-col >
+				<h1 class="font"> ຂໍ້ມູນໂຕະ </h1>
+			</ion-col>
+			
+		</ion-row>
+		<ion-row class=" ion-text-center">
+
+			<ion-col >
+				<ion-item>
+					<ion-label mode="md" position="floating"> ຊື້ໂຕະ</ion-label>
+					<ion-input mode="md" type="text" [value]="category_name" (keyup)="keyname($event)" ></ion-input>
+				</ion-item>
+			</ion-col>
+			
+    </ion-row>
+    
+	</ion-card>
+
+ 
+ 
+</ion-content>
+
+<ion-footer class="ion-no-border">
+	<ion-row >
+		<ion-col size="6" >
+			<ion-button col-12 size="large" shape="full" class="btn" (click)="save()" > ແກ້ໄຂ </ion-button>
+		</ion-col>
+    <ion-col size="6" >
+			<ion-button col-12 size="large" shape="full" class="btn" (click)="remove()" > ລົບ </ion-button>
+		</ion-col>
+	
+	</ion-row>
+</ion-footer>

@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+      "target": "https://my-api-domain.com/api",
+      "changeOrigin": true,
+      "secure": false,
+      "pathRewrite": {"^/api" : ""}
+    }
+  }

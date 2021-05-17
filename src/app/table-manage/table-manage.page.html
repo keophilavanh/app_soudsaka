@@ -1,0 +1,52 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+      <ion-grid>
+          <ion-row>
+            <ion-col class="back"  >
+              <div (click)="close()">
+                ກັບຄືນ
+              </div>
+            </ion-col>
+              <ion-col class="search-icon">
+                  <div>
+                    <ion-icon name="add" (click)="add_table()"></ion-icon>
+                  
+                      <!-- <ion-icon name="search" (click)="show_Serach_Input()"></ion-icon> -->
+                  </div>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list lines="none" >
+      
+     
+
+  <ion-item *ngFor="let item of table_list"  (click)="table_info(item)" >
+    <div class="item_inner">
+      <h3 class="d-flex two">
+        
+          <span class="item_title"> {{item.table_number}} </span>
+        
+        
+      </h3>
+   
+     
+    </div>
+  </ion-item>
+
+ 
+</ion-list>
+ 
+<ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

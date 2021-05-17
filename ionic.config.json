@@ -1,0 +1,15 @@
+{
+  "name": "SuperShopApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+
+  },
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/api_doc",
+      "proxyUrl": "https://192.136.1.17:80/api_doc"
+    }
+  ]
+}

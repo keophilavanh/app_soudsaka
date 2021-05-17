@@ -1,0 +1,90 @@
+
+
+<ion-content id="printer" class="bg_color">
+	<style>
+		table {
+		 
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+		
+		 th {
+		 
+		  text-align: left;
+		  padding: 8px;
+		}
+
+		.mt{
+			padding-right: 30;
+			text-align: right;
+		}
+	
+		div {
+		 
+		 
+		 margin-left: 30px;
+		 padding: 8px;
+	   }
+		
+	   
+	</style>
+     
+	<ion-card>
+		<div>
+			<table>
+				<tr>
+					
+					<td colspan="2" style="text-align: center;" ><h4 >ຮ້ານຈຸ່ມ 103</h4></td>
+				</tr>
+				<tr>
+					
+					<td colspan="2" style="text-align: center;"> <h2>ໃບບິນ</h2></td>
+				</tr>
+				<tr>
+					<td><p>ເລກບິນ : {{ticket?.order?.order_id}}</p></td>
+					<td><p>ວັນທີ : {{ticket?.order?.order_date}}</p></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p>ໂຕະ :  <strong>{{ticket?.order?.table_number}}</strong> </p></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p>-----------------------------------</p> </td>
+				</tr>
+				<tr *ngFor="let item of ticket?.list_order">
+					<td colspan="2" ><strong>{{item?.product_name}} <br>{{item?.quantity}} X {{item?.price}} = {{item?.total | number}} ກີບ </strong>
+					</td>
+					
+				</tr>
+				<tr>
+					<td colspan="2"><p>-----------------------------------</p></td>
+				</tr>
+				<tr>
+					<td colspan="2"><p>ມູນຄ່າ : <strong> {{ count_total() | number}}</strong> ກີບ</p></td>
+				</tr>
+			</table>
+		</div>
+	
+	
+	</ion-card>
+</ion-content>
+
+<ion-footer  lines=none>
+  <ion-toolbar class="ion-no-padding">
+ 
+   <ion-grid fixed class="ion-no-padding">
+     <ion-row>
+       <ion-col size="4"> 
+         <ion-button expand="full" (click)="closeBill()">
+        	ຍົກເລີກ
+      	</ion-button>
+		</ion-col>
+       <ion-col size="8"> 
+		   <ion-button expand="full"  (click)="print_to_driver()">
+        	<ion-icon name="print" ></ion-icon>
+       		 ສັ່ງປຣິ້ນບິນດຽວນີ້
+      		</ion-button>
+		</ion-col>
+     </ion-row>
+   </ion-grid>
+  </ion-toolbar>
+</ion-footer>

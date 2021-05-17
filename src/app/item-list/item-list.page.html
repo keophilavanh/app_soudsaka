@@ -1,0 +1,92 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+      <ion-grid>
+          <ion-row>
+              <!-- <ion-col class="logo_img">
+                  <div _ngcontent-gor-c7="" class="logo">
+                      <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png" />
+                  </div>
+              </ion-col> -->
+
+              <ion-col  size="10" class="logo_img">
+               
+            </ion-col>
+              <ion-col size="2" class="search-icon">
+                  <div>
+                      <ion-icon name="close" (click)="dismiss()"></ion-icon>
+                      
+                  </div>
+              </ion-col>
+          </ion-row>
+
+          <ion-row>
+           
+
+            <ion-col  size="12" >
+              <ion-button color="primary" *ngFor="let item of category_list" (click)="select(item)" >{{item.c_name}}</ion-button>
+             
+            </ion-col>
+<!-- 
+            <ion-col  size="12" >
+              <ion-item lines="none">
+                <ion-checkbox></ion-checkbox>&nbsp; ປົກກະຕິ  &nbsp;<ion-checkbox></ion-checkbox>&nbsp; ຄົນຈີນ ລົດໄຟລາວ-ຈີນ
+              </ion-item>
+            </ion-col> -->
+            
+        </ion-row>
+      </ion-grid>
+
+     
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list lines="none"  >
+
+    <ion-item *ngFor="let item of product_list" (click)="select_product(item)" >
+      <div class="item_inner">
+        <h3 class="d-flex two">
+            <span class="item_title">   {{item.f_name}}  </span>
+            <span class="end">{{item.price | number}} ກີບ</span>
+        </h3>
+        
+      
+      </div>
+     
+    </ion-item>
+
+    
+      
+     
+
+  
+  </ion-list>
+
+ 
+ 
+</ion-content>
+<!-- <ion-footer class="ion-no-border">
+	<ion-row>
+    <ion-col size="6">
+      <ion-item>
+        <ion-label>
+            <ion-icon color="medium" name="people"></ion-icon>
+        </ion-label>
+        <ion-input type="number" placeholder="ຈຳນວນຄົນ" (keyup)="keyVendorperson($event)"></ion-input>
+    </ion-item>
+    </ion-col>
+    <ion-col size="6">
+      <ion-item>
+        <ion-label>
+            <ion-icon color="medium" name="cash"></ion-icon>
+        </ion-label>
+        <ion-input type="number" placeholder="ຈຳນວນເງີນ" (keyup)="keyVendorprice($event)"></ion-input>
+    </ion-item>
+    </ion-col>
+		<ion-col size="12">
+			<ion-button size="large" shape="full" class="btn" (click)="OncreateBill()"><ion-icon name="print"></ion-icon> ຊຳລະເງີນ</ion-button>
+		</ion-col>
+	</ion-row>
+	
+</ion-footer> -->

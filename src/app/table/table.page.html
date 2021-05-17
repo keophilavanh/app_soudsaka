@@ -1,0 +1,40 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+      <ion-grid>
+          <ion-row>
+              
+              <ion-col class="ion-text-center" >
+                 <h3 (click)="loadTable()" > ໜ້າໂຕ </h3>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid >
+    <ion-row >
+
+
+      <div class="table_div" *ngFor="let item of table_list"  (click)="tab1(item)">
+        <div [ngClass]="{table: item.status==='0',table_activ: item.status==='1'}"   >
+          <p class="ion-text-center"> {{item.table_number}}</p>
+        </div>
+
+       
+      </div>
+    
+
+     
+
+
+    </ion-row>
+
+
+  </ion-grid>
+ 
+
+</ion-content>

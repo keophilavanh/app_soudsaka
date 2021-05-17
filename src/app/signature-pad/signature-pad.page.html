@@ -1,0 +1,20 @@
+<ion-content  (click)="dismiss()">
+
+</ion-content>
+<ion-footer class="ion-no-border">
+  <div class="ion-text-center" >
+    <signature-pad class="signaturePad" [options]="signaturePadOptions" #signatureCanvas id="signatureCanvas" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+    
+  </div>
+  <div class="details">
+    <div class="buton ion-text-center">
+      <ion-button shape="round" (click)="save()" >ບັນທືນລາຍເຊັນ</ion-button>
+      <ion-button class="btn_register" shape="round" color="danger" fill="outline" (click)="clear()" >ເລີ້ມໃໝ່</ion-button>
+     
+    </div>
+  </div>
+
+  
+  
+  
+</ion-footer>

@@ -1,0 +1,108 @@
+
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+      <ion-grid>
+          <ion-row>
+              <ion-col class="back"  >
+                <div (click)="dismiss()">
+                  ກັບຄືນ
+                </div>
+              </ion-col>
+              <ion-col class="search-icon">
+                  <div>
+                    <ion-icon name="print" (click)="print_to_driver()"  ></ion-icon>
+                    
+                  </div>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="printer" class="bg_color">
+	 
+  <style>
+    table {
+     
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+     th {
+     
+      text-align: left;
+      padding: 8px;
+    }
+
+    div {
+     
+     
+     margin-left: 30px;
+     padding: 8px;
+   }
+   .date{
+      display: flex;
+      justify-content: space-between;
+
+   }
+    
+   
+    </style>
+	<ion-card>
+    <div>
+      <table>
+       
+        <tr>
+          
+          <td colspan="2" style="text-align: center;"> <h2>ລາຍງານ</h2></td>
+        </tr>
+        <tr>
+          <td colspan="2"  style="text-align: center;">
+              <p *ngIf="report == 1" > ລາຍຮັບ </p>
+              <p *ngIf="report == 2" > ການຂາຍ </p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            ວັນທີ : {{date_start}} ຫາ {{date_end}}
+           
+            
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><p> -----------------------------------</p></td>
+        </tr>
+        <tr>
+          <td colspan="2" *ngIf="report == 1">
+                          <p >
+                              ຈຳນວນໃບບິນ : <strong> {{ data?.length | number }}</strong> ໃບບິນ <br> 
+                              ມູນຄ່າ : <strong> {{ count_total() | number }}</strong> ກີບ
+                         </p>
+          </td>
+          <td colspan="2" *ngIf="report == 2">
+            <p  *ngFor="let item of data" >
+                <strong> {{ item?.f_name }}</strong> <br> 
+                <strong> {{ item?.qty }} X {{ item?.price | number }} = {{ item?.total | number}} ກີບ </strong>  
+               
+           </p>
+</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p> -----------------------------------</p>
+            <p *ngIf="report == 2" >
+              
+              ມູນຄ່າ : <strong> {{ count_total() | number }}</strong> ກີບ
+         </p>
+          </td>
+        </tr>
+       
+      </table>
+    </div>
+	
+	
+	</ion-card>
+</ion-content>
+

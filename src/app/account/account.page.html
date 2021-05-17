@@ -1,0 +1,104 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar class="header">
+        <div _ngcontent-gor-c7="" class="logo">
+            <span>
+            <!-- <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png" /> -->
+        </span>
+        </div>
+        
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <section class="login_logo">
+        <div class="container">
+            <div class="img_logo ion-text-center">
+                <img src="../../assets/imgs/logo.png" alt="" />
+            </div>
+            <div class="name_app">
+                <h4 class="ion-text-center">&nbsp; &nbsp; {{username}} &nbsp;</h4>
+            </div>
+            <div class="buton ion-text-center">
+               
+                <ion-button class="btn_register" shape="round" color="danger" fill="outline" (click)="isLogout()">ອອກຈາກລະບົບ</ion-button>
+            </div>
+        </div>
+    </section>
+    <section class="container_list_menu ion-text-center">
+        <div class="wappper_center_with_hight">
+
+            <ion-row>
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin" (click)="product_manage()">
+                        <ion-card-content>
+                           
+                            <ion-icon name="pricetag-sharp"  color="primary"></ion-icon>
+                            <!-- <ion-icon name="document" color="primary"></ion-icon> -->
+                            <br>
+                           
+
+                            <ion-label>
+                                ອາຫານ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin" (click)="table_manage()">
+                        <ion-card-content>
+                            
+                            <ion-icon name="apps-sharp"  color="primary"></ion-icon><br>
+                            
+
+                            <ion-label>
+                                ໂຕະ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+            </ion-row>
+            <ion-row>
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin" (click)="category_manage()">
+                        <ion-card-content>
+                         
+                            <ion-icon name="list-circle-sharp"  color="primary"></ion-icon> <br>
+                            <!-- <ion-icon name="close-circle" color="primary"></ion-icon> <br> -->
+                           
+                            <ion-label>
+                               ປະເພດອາຫານ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+
+                <div class="menu">
+                    <ion-card class="menu-card ion-no-margin" (click)="user_manage()" >
+                        <ion-card-content>
+                            <!-- <ion-icon name="person-sharp"></ion-icon> -->
+                            <ion-icon name="person-sharp" color="primary"></ion-icon><br>
+                            <ion-label>
+                                ຜູ້ໃຊ້
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div>
+                
+                <!-- <div class="menu">
+                    <ion-card class="menu-card ion-no-margin"  (click)="report()" >
+                        <ion-card-content>
+                         
+                            <ion-icon name="podium"  color="primary"></ion-icon> <br> 
+                            <ion-label>
+                                ລາຍງານ
+                            </ion-label>
+                        </ion-card-content>
+                    </ion-card>
+                </div> -->
+               
+            </ion-row>
+            
+        </div>
+
+    </section>
+</ion-content>

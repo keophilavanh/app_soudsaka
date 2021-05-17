@@ -1,0 +1,36 @@
+
+@font-face {
+    font-family: 'boonhome';
+    src: url('../assets/font/boonhome-400.woff') format('woff'),
+        url('../assets/font/boonhome-400-oblique.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'boonhome';
+    src: url('../assets/font/boonhome-400.woff') format('woff'),
+        url('../assets/font/boonhome-400-oblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    
+}
+
+*,
+body,
+html,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+li {
+    --ion-font-family: 'boonhome';
+    font-family: 'boonhome';
+    //letter-spacing: .05rem;
+}

@@ -1,0 +1,95 @@
+<ion-header [translucent]="true" class="ion-no-border under">
+	<ion-toolbar>
+		<ion-grid>
+			<ion-row>
+				<ion-col class="back"  >
+					<div >
+					   ໂຕະ : {{table?.table_name}} <br> ເລກບິນ : 12
+					</div>
+				  </ion-col>
+				<ion-col class="search-icon">
+					<div>
+						<ion-icon name="add" (click)="item_list()" ></ion-icon>
+						<!-- <ion-icon name="search" (click)="show_Serach_Input()"></ion-icon> -->
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+  
+		<!-- Animated Searchbar -->
+	
+	</ion-toolbar>
+  </ion-header>
+
+<ion-content class="bg_color">
+	<ion-card >
+		<ion-row class="">
+			<ion-col size="7">
+				<h2>ລາຍການ</h2>
+			</ion-col>
+			<ion-col size="2" class="ion-text-center">
+				<h4>ຈຳນວນ</h4>
+			</ion-col>
+			<ion-col size="3" class="ion-text-end">
+				<h4>ຈຳນວນເງີນ</h4>
+			</ion-col>
+		</ion-row>
+		<div class="items_details">
+			<ion-row class="" *ngFor="let item of ticketdetail; let i = index">
+				<ion-col size="7" class="d-flex">
+					
+					<div class="text_box">
+						<h3>{{item?.product_name}}</h3>
+						
+						<p (click)="edit(item,i)">ແກ້ໄຂ</p>
+						<!-- <ion-checkbox checked="true"></ion-checkbox> -->
+					</div>
+				</ion-col>
+				<ion-col size="2" class="ion-text-center">
+					<h4><strong>{{item?.quantity}}</strong></h4>
+				</ion-col>
+				<ion-col size="3" class="ion-text-end">
+					<h4><strong>{{item?.total | number}}</strong></h4>
+				</ion-col>
+			</ion-row>
+
+			<ion-row class="" *ngIf="!ticketdetail?.length">
+				<ion-col size="7" class="d-flex">
+					
+					<div class="text_box">
+						<h3>--- ບໍ່ມີຂໍ້ມູນ ---</h3>
+						
+					</div>
+				</ion-col>
+			
+			</ion-row>
+			
+		</div>
+
+		<ion-row class="payment_details">
+			<ion-col col-7 class="ion-text-end">
+				<h4>ລວມເງີນທັງໝົດ</h4>
+			</ion-col>
+			<ion-col size="5" class="ion-text-end">
+				<h3><strong>{{ count_total() | number}} ກີບ</strong></h3>
+			</ion-col>
+		</ion-row>
+	
+	</ion-card>
+
+	
+</ion-content>
+
+<ion-footer class="ion-no-border">
+
+	<ion-row>
+		
+		<ion-col size="6">
+			<ion-button size="large" shape="full" class="btn" (click)="option()"> ຄິດໄລເງິນ </ion-button>
+		</ion-col>
+		<ion-col size="6">
+			<ion-button size="large" shape="full" class="btn" (click)="back_and_order()" > ສັ່ງ / ກັບໂຕະ </ion-button>
+		</ion-col>
+	</ion-row>
+	
+</ion-footer>

@@ -1,0 +1,72 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="logo_img">
+          <div>
+            <p>&nbsp;&nbsp;<ion-icon (click)="zoomin()" name="add-circle-outline" size="large"></ion-icon>  &nbsp;&nbsp; &nbsp; <ion-icon (click)="zoomout()" name="remove-circle-outline" size="large"></ion-icon></p>
+          </div>
+        </ion-col>
+        <ion-col class="search-icon">
+          <div >
+              <p (click)="black()">ກັບຄືນ</p>
+          </div>
+      </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- <object data="../../assets/imgs/example.pdf" type="application/pdf" width="300" height="200">
+            
+  </object> -->
+  <div class="image">
+    <pdf-viewer width="100px" #pdfViewer 
+    
+    [src]="pdfSrc" 
+    [render-text]="true"
+    [original-size]="false"
+    [show-all]="true"
+    [zoom]="zom"
+    style="display: block;"
+   ></pdf-viewer>
+    <!-- <img  (click)="view_file()" src="../../assets/example.png" width="100%"> -->
+    
+  </div>
+    
+
+
+
+
+
+
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <div class="details">
+    <ion-row>
+      <ion-col size="12" class="ion-text-center" >
+        
+        <h2>ເອກະສານໂຄງການ.....  </h2>
+       
+      </ion-col>
+    </ion-row>
+  </div>
+  <div class="details">
+    <div class="buton ion-text-center">
+      <!-- <ion-button shape="round" (click)="refresh()" >test</ion-button> -->
+      <ion-button shape="round" (click)="dowload()"  >ດາວໂຫລດ PDF</ion-button>
+    
+    </div>
+  </div>
+
+  
+  
+  
+</ion-footer>

@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <div _ngcontent-gor-c7="" class="logo">
+            <!-- <span> <img _ngcontent-gor-c7="" src="../../assets/imgs/logo.png"> </span> -->
+        </div>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="padding" fullscreen>
+    <div class="container">
+        <div class="logo_laoapp ion-text-center">
+            <img src="../../assets/imgs/logo.png" alt="">
+
+        </div>
+        <div class="name_app">
+            <h4 class="ion-text-center">&nbsp; &nbsp; ຮ້ານຈູ່ມ 103 &nbsp;</h4>
+        </div>
+    </div>
+    <div class="container_from">
+        <ion-list>
+            <ion-item>
+                <ion-label>
+                    <ion-icon color="medium" name="person-sharp"></ion-icon>
+                  
+                </ion-label>
+                <ion-input type="text" placeholder="ຊື່ຜູ້ໃຊ້" (keyup)="keyupGetusername($event)" ></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>
+                    <ion-icon color="medium" name="lock-open-sharp"></ion-icon>
+                </ion-label>
+                <ion-input type="password" placeholder="ລະຫັດຜ່ານ" (keyup)="keyupGetpassword($event)" (keyup.enter)="onLogin()" > </ion-input>
+                <!-- <h4 slot="end">ລືມລະຫັດ</h4> -->
+
+            </ion-item>
+        </ion-list>
+
+        <div padding class="btn_submit">
+            <ion-button  color="danger" expand="block"  (click)="onLogin()"> ເຂົ້າສູ່ລະບົບ </ion-button>
+           
+        </div>
+    </div>
+
+</ion-content>

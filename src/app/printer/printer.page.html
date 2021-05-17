@@ -1,0 +1,45 @@
+<ion-header id="printer" [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+      <ion-grid>
+          <ion-row>
+              <ion-col class="logo_img">
+                  <div _ngcontent-gor-c7="" class="logo">
+                      <img _ngcontent-gor-c7="" src="http://192.168.10.102/tax_multi/image/logo.png" />
+                  </div>
+              </ion-col>
+              <!-- <ion-col class="search-icon">
+                  <div>
+                      <ion-icon name="search" (click)="show_Serach_Input()"></ion-icon>
+                  </div>
+              </ion-col> -->
+          </ion-row>
+      </ion-grid>
+
+      <!-- Animated Searchbar -->
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list lines="none" >
+
+    <div *ngIf="display" >
+      <div *ngFor="let p of parts">
+      
+        <img [src]="p" >
+      </div>
+   </div>
+      
+     
+
+  <ion-item   *ngFor="let item of list" (click)="select_Bluetooth(item)" >
+    <div class="item_inner">
+      {{item.name}}
+      <!-- {{item.name}} : {{item.id}} -->
+    </div>
+  </ion-item>
+
+
+</ion-list>
+ 
